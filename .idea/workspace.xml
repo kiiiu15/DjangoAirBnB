@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4593eda0-867c-4f7f-b087-9240c4a7b615" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/DjangoAirBnB.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/AddView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/DeleteView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/DetailView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/UpdateView.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/db.sqlite3" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1j1aCP0XRFfUa9aCbg6H9DskQzx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/djangoFirstProjects" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4593eda0-867c-4f7f-b087-9240c4a7b615" name="Default Changelist" comment="" />
+      <created>1602973924452</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602973924452</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="692" y="355" width="598" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602976378140">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="692" y="355" width="598" height="403" key="#com.intellij.fileTypes.FileTypeChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1602976378140" />
+    <state x="770" y="237" width="441" height="640" key="RollbackChangesDialog" timestamp="1602996476003">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="770" y="237" width="441" height="640" key="RollbackChangesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1602996476003" />
+  </component>
+</project>
