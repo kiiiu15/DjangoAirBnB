@@ -11,24 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4593eda0-867c-4f7f-b087-9240c4a7b615" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/DjangoAirBnB.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/AddView.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/DeleteView.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/DetailView.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/UpdateView.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/migrations/0003_property.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/casa.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/AddView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/DeleteView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/DetailView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/ListView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/UpdateView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/djangoFirstProjects/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/djangoFirstProjects/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +83,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
