@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.auth.admin import admin
+from django.utils import timezone
+
 
 # Create your models here.
 
@@ -24,3 +27,35 @@ class Property(models.Model):
         return self.tittle
 
 
+class Reservation(models.Model):
+    property = models.ForeignKey(Property, on_delete=models.PROTECT)
+    date = models.DateField(default=timezone.now())
+    code = models.CharField(max_length=70, default=str(timezone.now()))
+    subtotal = models.FloatField(default=0.0)
+    commission = models.FloatField(default=0.0)
+    total = models.FloatField(default=0.0)
+    guestName = models.CharField(max_length=50)
+    guestLastName = models.CharField(max_length=50)
+    guestEmail = models.EmailField()
+
+    def __str__(self):
+        return self.code
+
+
+class DateRental(models.Model):
+    property = models.ForeignKey(Property, on_delete=models.CASCADE)
+    reservation = models.ForeignKey(Reservation, null=True, blank=True, on_delete=models.CASCADE)
+    date = models.DateField()
+
+    def __str__(self):
+        return str(self.date)
+
+
+class DateRentalInline(admin.TabularInline):
+    model = DateRental
+    fk_name = "property"
+    max_num = 7
+
+
+class PropertyAdmin(admin.ModelAdmin):
+    inlines = [DateRentalInline, ]
