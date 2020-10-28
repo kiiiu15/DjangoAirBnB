@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views import generic
 from django.http import HttpResponse
@@ -13,19 +13,13 @@ def index(request):
 
 @csrf_exempt
 def showAvailable(request):
-    print(request.POST)
-
     fromDate = request.POST['dateFrom']
     toDate = request.POST['dateTo']
-
-    # fromDate = "2020-10-22"
-    # toDate = "2020-10-23"
     date_format = "%Y-%m-%d"
     a = datetime.strptime(fromDate, date_format)
     b = datetime.strptime(toDate, date_format)
 
     days = (b - a).days + 1
-    print(days)
     properties = []
 
     for property in models.Property.objects.all():
@@ -37,9 +31,39 @@ def showAvailable(request):
     return render(request, "Airbnb/index2.html", {"properties": properties, "from": fromDate, "to": toDate})
 
 
+def ShowProperty(request, pk):
+    fromDate = request.POST['dateFrom']
+    toDate = request.POST['dateTo']
+    date_format = "%Y-%m-%d"
+    a = datetime.strptime(fromDate, date_format)
+    b = datetime.strptime(toDate, date_format)
+
+    days = (b - a).days + 1
+    obj = get_object_or_404(models.Property, pk=pk)
+
+    subtotal = days * obj.pricePerDay
+    comision = subtotal * 0.08
+    total = subtotal + comision
+
+    return render(request, "Airbnb/detail.html",
+                  {"object": obj, "from": fromDate, "to": toDate, "idProperty": pk, "subtotal": subtotal,
+                   "comision": comision, "total": total})
 
 
-class ShowProperty(generic.DetailView):
-    model = models.Property
-    template_name_suffix = ""
-    template_name = "Airbnb/"
+def ReserveProperty(request, idProperty):
+    print(request.POST)
+    data = request.POST
+    property = models.Property.objects.get(pk=idProperty)
+    reservation = models.Reservation(property=property, subtotal=data['subtotal'], commission=data['comission'],
+                                     total=data['total'], guestName=data['guestName'],
+                                     guestLastName=data['guestLastName'], guestEmail=data['guestEmail'])
+
+    reservation.save()
+
+    datesSelected = property.dates.filter(date__range=[data['dateFrom'], data['dateTo']], reservation=None)
+
+    for date in datesSelected:
+        date.reservation = reservation
+        date.save()
+
+    return render(request, "Airbnb/welcome.html", {"message": "Thank you for your reservation!"})

@@ -2,38 +2,44 @@
 {% load static %}
 {% block content %}
 <div class="container p-3 ">
-    <form class="00  form-inline border border-dark p-4 rounded col-md-6 d-flex flex-wrap  " method="post" action="{% url 'Airbnb:List' %}" class="">
+    <form class=" form-inline border border-dark p-4 rounded col-md-6 d-flex flex-wrap  " method="post"
+        action="{% url 'Airbnb:List' %}" class="">
         <div class="form-group  d-flex flex-wrap">
             <label for="dateFrom">From</label>
             <input class="mx-2 bg-light " type="date" id="dateFrom" name="dateFrom" value="{{from}}">
             <label for="dateTo">To</label>
-            <input  class="mx-2 bg-light " type="date" id="dateTo" name="dateTo" value="{{to}}">
+            <input class="mx-2 bg-light " type="date" id="dateTo" name="dateTo" value="{{to}}">
         </div>
-        
+
         <div class="form-group d-flex flex-wrap">
             <button class="btn btn-dark" type="submit">Search</button>
         </div>
-        
+
     </form>
 
     <div class="d-flex flex-wrap">
         {% if not properties%}
 
         <div class="alert alert-danger my-5" role="alert">
-           Ups! It seems there are no properties available. Try other dates.
-          </div>
-    
+            Ups! It seems there are no properties available. Try other dates.
+        </div>
+
         {% endif %}
         {% for i in properties %}
-        
+
         <div class="card m-4" style="width: 18rem;">
             <img src="{{i.photo.url }}" class="img-fluid card-img-top" alt="Loading...">
             <div class="card-body">
                 <h5 class="card-title">{{i.tittle}}</h5>
-                <a href="#" class="btn btn-dark">Rental</a>
+                <form action="{% url 'Airbnb:Detail' i.id %}" method="post">{% csrf_token %} 
+                    
+                    <input class="d-none" type="date" id="dateFrom" name="dateFrom" value="{{from}}">
+                    <input class="d-none" type="date" id="dateTo" name="dateTo" value="{{to}}">
+                    <button class="btn btn-dark" type="submit">Rental</button>
+                </form>
             </div>
         </div>
-    
+
         {% endfor %}
 
     </div>
@@ -41,16 +47,16 @@
 
 </div>
 <script>
-    (function (){
+    (function () {
         const dFrom = document.getElementById("dateFrom");
         const dTo = document.getElementById("dateTo");
 
-        
+
         //dFrom.min =  new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
 
-        dFrom.addEventListener("change", () => {dTo.value = ""; dTo.min = dFrom.value; },false);
+        dFrom.addEventListener("change", () => { dTo.value = ""; dTo.min = dFrom.value; }, false);
 
-       
+
     })();
 
 </script>
