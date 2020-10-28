@@ -21,7 +21,7 @@ class Property(models.Model):
     description = models.CharField(max_length=500)
     pricePerDay = models.FloatField(default=0.0)
     maxPeople = models.IntegerField()
-    photo = models.ImageField()
+    photo = models.ImageField(upload_to="gallery")
 
     def __str__(self):
         return self.tittle
@@ -43,7 +43,7 @@ class Reservation(models.Model):
 
 
 class DateRental(models.Model):
-    property = models.ForeignKey(Property, on_delete=models.CASCADE)
+    property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name="dates")
     reservation = models.ForeignKey(Reservation, null=True, blank=True, on_delete=models.CASCADE)
     date = models.DateField()
 
