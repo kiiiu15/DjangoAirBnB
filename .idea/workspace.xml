@@ -11,13 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4593eda0-867c-4f7f-b087-9240c4a7b615" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/base2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/welcome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
