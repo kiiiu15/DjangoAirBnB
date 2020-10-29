@@ -1,14 +1,16 @@
+from datetime import datetime
+
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views import generic
-from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+
 from . import models
-from datetime import datetime
 
 
 def index(request):
-    return render(request, "Airbnb/welcome.html")
+    return render(request, "Airbnb/welcome.html", {"cities": models.City.objects.all()})
 
 
 @csrf_exempt
@@ -22,13 +24,27 @@ def showAvailable(request):
     days = (b - a).days + 1
     properties = []
 
-    for property in models.Property.objects.all():
-        if property.dates.filter(date__range=[fromDate, toDate], reservation=None).count() == days:
-            properties.append(property)
+    maxPax = request.POST["maxPax"]
+    city = request.POST["city"]
 
-    print(properties)
-    # return HttpResponse("<p>No jodas.. </p>")
-    return render(request, "Airbnb/index2.html", {"properties": properties, "from": fromDate, "to": toDate})
+    if city == '0':
+        print('a')
+        for property in models.Property.objects.filter(maxPeople__gte=maxPax):
+            if property.dates.filter(date__range=[fromDate, toDate], reservation=None).count() == days:
+                properties.append(property)
+
+        return render(request, "Airbnb/index2.html",
+                      {"properties": properties, "from": fromDate, "to": toDate, "max": maxPax,
+                       "cities": models.City.objects.all()})
+    else:
+        print("b")
+        for property in models.Property.objects.filter(maxPeople__gte=maxPax, city__id=city):
+            if property.dates.filter(date__range=[fromDate, toDate], reservation=None).count() == days:
+                properties.append(property)
+
+        return render(request, "Airbnb/index2.html",
+                      {"properties": properties, "from": fromDate, "to": toDate, "max": maxPax,
+                       "cities": models.City.objects.all().exclude(pk=city), "selected": models.City.objects.get(pk=city)})
 
 
 def ShowProperty(request, pk):

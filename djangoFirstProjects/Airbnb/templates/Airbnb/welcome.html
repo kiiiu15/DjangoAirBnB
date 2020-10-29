@@ -7,11 +7,11 @@
 
     {% if message %}
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-       {{message}}
+        {{message}}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+    </div>
     {% endif %}
     <div class="alert alert-success" role="alert">
         <h4 class="alert-heading"></h4>
@@ -23,9 +23,9 @@
         action="{% url 'Airbnb:List' %}" class="">
         <div class="form-group  d-flex flex-wrap">
             <label for="dateFrom">From</label>
-            <input class="mx-2 bg-light " type="date" id="dateFrom" name="dateFrom">
+            <input class="mx-2 bg-light " type="date" id="dateFrom" required name="dateFrom">
             <label for="dateTo">To</label>
-            <input class="mx-2 bg-light " type="date" id="dateTo" name="dateTo">
+            <input class="mx-2 bg-light " type="date" id="dateTo" required name="dateTo">
         </div>
 
         <div class="form-group d-flex flex-wrap">
@@ -33,6 +33,21 @@
             <button class="btn btn-dark" type="submit">Search</button>
 
         </div>
+
+        <!-- parte nueva  -->
+        <div class="form-group d-flex flex-wrap p-1">
+            <label for="city">City: </label>
+
+            <select name="city" id="city" required class="mx-2  ">
+                <option value="0">-----</option>
+                {% for city in cities %}
+                <option value="{{city.id}}">{{city.name}}</option>
+                {% endfor %}
+            </select>
+            <label for="maxPax">Max Pax: </label>
+            <input class="from-control mx-2" required type="number" step="1" min="1" name="maxPax" id="maxPax">
+        </div>
+        <!-- fin parte nueva  -->
 
     </form>
 </div>
