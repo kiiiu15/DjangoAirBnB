@@ -10,29 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4593eda0-867c-4f7f-b087-9240c4a7b615" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/16_IuG84JN.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/casa.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/casa_8H7eGvu.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/casa_oe2iUOx.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/casa.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/casa02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/pics01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/pics05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/pics06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/pics08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/pics08_E56PqAT.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/pics09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/media/gallery/pics11.jpg" beforeDir="false" />
-    </list>
+    <list default="true" id="4593eda0-867c-4f7f-b087-9240c4a7b615" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
