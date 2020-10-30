@@ -57,7 +57,7 @@
         const dTo = document.getElementById("dateTo");
 
 
-        //dFrom.min =  new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
+        dFrom.min =  new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
 
         dFrom.addEventListener("change", () => { dTo.value = ""; dTo.min = dFrom.value; }, false);
 

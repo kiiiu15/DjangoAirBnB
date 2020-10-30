@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views import generic
@@ -71,4 +71,5 @@ def ReserveProperty(request, idProperty):
         date.reservation = reservation
         date.save()
 
-    return render(request, "Airbnb/welcome.html", {"message": "Thank you for your reservation!"})
+    return HttpResponseRedirect(reverse("Airbnb:Index"))
+
