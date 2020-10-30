@@ -6,44 +6,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation - UTN</title>
-    <link rel="stylesheet" href="{% static 'Airbnb/css/skel-noscript.css'%}">
-    <link rel="stylesheet" href="{% static 'Airbnb/css/style.css'%}">
+  
 </head>
 
-<body>
+<body background="{% static 'Airbnb/images/fondo.jpg' %}">
 
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Reservation</a>
+        <a class="navbar-brand" href="{% url 'Airbnb:Index' %}">Reservation</a>
     </nav>
 
 
     {%block content%}{% endblock %}
+
+    <div class="my-4 py-4"> </div>
+    <div class="my-5 py-4"> </div>
     
-    <footer>
+    <footer class="fixed-bottom border border-white" >
         <div class="container-fluid bg-dark">
-            <div class="row">
-                <div class="col-3">
-                    <img class="rounded-circle" src="{% static 'Airbnb/images/grupo/Bulzomi.png' %}"
-                        alt="Generic placeholder image" width="140" height="140">
-                    <h2>Agustin Exequiel Bulzomi Suarez</h2>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-3">
-                    <img class="rounded-circle" src="{% static 'Airbnb/images/grupo/Rodri.png' %}"
-                        alt="Generic placeholder image" width="140" height="140">
-                    <h2>Hector Rodrigo Soto</h2>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-3">
-                    <img class="rounded-circle" src="{% static 'Airbnb/images/grupo/Rocio.png' %}"
-                        alt="Generic placeholder image" width="140" height="140">
-                    <h2>Rocio Gocella</h2>
-                </div><!-- /.col-lg-4 -->
-                <!-- /.row -->
-                <div class="col-3">
-                    <img class="rounded-circle" src="{% static 'Airbnb/images/grupo/David.png' %}"
-                        alt="Generic placeholder image" width="140" height="140">
-                    <h2>David Navarro</h2>
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
+            
+
+                <img class="img-fluid" src="{% static 'Airbnb/images/rociofooter.png' %}" alt="Loading footer..." weight="100%" height="auto">
+                
         </div>
 
     </footer>

@@ -11,7 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4593eda0-867c-4f7f-b087-9240c4a7b615" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/migrations/0013_auto_20201030_0113.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/migrations/0014_auto_20201030_0118.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/migrations/0015_auto_20201030_0119.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/fondo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/grupo.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/rociofooter.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/grupo/Bulzomi.png" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/grupo/Bulzomi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/grupo/David.png" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/grupo/David.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/grupo/Rocio.png" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/grupo/Rocio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/grupo/Rodri.png" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/static/Airbnb/images/grupo/Rodri.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/base2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/templates/Airbnb/welcome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoFirstProjects/Airbnb/views.py" afterDir="false" />

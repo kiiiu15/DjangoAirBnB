@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import admin
 from django.utils import timezone
+from django.contrib.admin.models import LogEntry, ADDITION
+from django.contrib.contenttypes.models import ContentType
+from django.core.validators import MinValueValidator
 
 
 # Create your models here.
@@ -19,8 +22,8 @@ class Property(models.Model):
     city = models.ForeignKey(City, on_delete=models.PROTECT)
     tittle = models.CharField(max_length=60)
     description = models.CharField(max_length=500)
-    pricePerDay = models.FloatField(default=0.0)
-    maxPeople = models.IntegerField()
+    pricePerDay = models.FloatField(default=0.0, validators=[MinValueValidator(0.0)])
+    maxPeople = models.IntegerField(validators=[MinValueValidator(0.0)])
     photo = models.ImageField(upload_to="gallery")
 
     def __str__(self):
@@ -58,4 +61,22 @@ class DateRentalInline(admin.TabularInline):
 
 
 class PropertyAdmin(admin.ModelAdmin):
+    fields = ('city', 'tittle', 'description', 'pricePerDay', 'maxPeople', 'photo')
     inlines = [DateRentalInline, ]
+
+    def get_queryset(self, request):
+        qs = super(PropertyAdmin, self).get_queryset(request)
+        if request.user.is_superuser:
+            return qs
+        property_ct = ContentType.objects.get_for_model(Property)
+        log_entries = LogEntry.objects.filter(
+            content_type=property_ct,
+            user=request.user,
+            action_flag=ADDITION
+        )
+        user_property_ids = [a.object_id for a in log_entries]
+        return qs.filter(id__in=user_property_ids)
+
+    def save_model(self, request, instance, form, change):
+        instance.owner = request.user
+        super(PropertyAdmin, self).save_model(request, instance, form, change)

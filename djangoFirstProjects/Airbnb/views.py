@@ -27,24 +27,13 @@ def showAvailable(request):
     maxPax = request.POST["maxPax"]
     city = request.POST["city"]
 
-    if city == '0':
-        print('a')
-        for property in models.Property.objects.filter(maxPeople__gte=maxPax):
-            if property.dates.filter(date__range=[fromDate, toDate], reservation=None).count() == days:
-                properties.append(property)
+    for property in models.Property.objects.filter(maxPeople__gte=maxPax, city__id=city):
+        if property.dates.filter(date__range=[fromDate, toDate], reservation=None).count() == days:
+            properties.append(property)
 
-        return render(request, "Airbnb/index2.html",
-                      {"properties": properties, "from": fromDate, "to": toDate, "max": maxPax,
-                       "cities": models.City.objects.all()})
-    else:
-        print("b")
-        for property in models.Property.objects.filter(maxPeople__gte=maxPax, city__id=city):
-            if property.dates.filter(date__range=[fromDate, toDate], reservation=None).count() == days:
-                properties.append(property)
-
-        return render(request, "Airbnb/index2.html",
-                      {"properties": properties, "from": fromDate, "to": toDate, "max": maxPax,
-                       "cities": models.City.objects.all().exclude(pk=city), "selected": models.City.objects.get(pk=city)})
+    return render(request, "Airbnb/index2.html",
+                  {"properties": properties, "from": fromDate, "to": toDate, "max": maxPax,
+                   "cities": models.City.objects.all().exclude(pk=city), "selected": models.City.objects.get(pk=city)})
 
 
 def ShowProperty(request, pk):

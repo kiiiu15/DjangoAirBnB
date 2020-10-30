@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container p-3 ">
-    <form class=" form-inline border border-dark p-4 rounded col-md-6 d-flex flex-wrap  " method="post"
+    <form class=" form-inline border border-dark p-4 rounded col-md-6 d-flex flex-wrap bg-light " method="post"
         action="{% url 'Airbnb:List' %}" class="">
         <div class="form-group  d-flex flex-wrap">
             <label for="dateFrom">From</label>
@@ -24,7 +24,6 @@
                 {% if selected%}
                 <option value="{{selected.id}}">{{selected.name}}</option>
                 {% endif %}
-                <option value="0">-----</option>
                 {% for city in cities %}
                 <option value="{{city.id}}">{{city.name}}</option>
                 {% endfor %}
@@ -39,7 +38,7 @@
         {% if not properties%}
 
         <div class="alert alert-danger my-5" role="alert">
-            Ups! It seems there are no properties available. Try other dates.
+            Ups! It seems there are no properties available. Try other dates/city/pax.
         </div>
 
         {% endif %}

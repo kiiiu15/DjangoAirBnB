@@ -13,13 +13,13 @@
         </button>
     </div>
     {% endif %}
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success text-center" role="alert">
         <h4 class="alert-heading"></h4>
         Welcome, please indicate your dates!
     </div>
 
 
-    <form class="form-inline border border-dark p-4 rounded col-md-6 d-flex flex-wrap  " method="post"
+    <form class="form-inline border border-dark p-4 rounded col-md-6 d-flex flex-wrap bg-light " method="post"
         action="{% url 'Airbnb:List' %}" class="">
         <div class="form-group  d-flex flex-wrap">
             <label for="dateFrom">From</label>
@@ -39,12 +39,12 @@
             <label for="city">City: </label>
 
             <select name="city" id="city" required class="mx-2  ">
-                <option value="0">-----</option>
+
                 {% for city in cities %}
                 <option value="{{city.id}}">{{city.name}}</option>
                 {% endfor %}
             </select>
-            <label for="maxPax">Max Pax: </label>
+            <label for="maxPax">Pax: </label>
             <input class="from-control mx-2" required type="number" step="1" min="1" name="maxPax" id="maxPax">
         </div>
         <!-- fin parte nueva  -->
