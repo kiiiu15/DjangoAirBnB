@@ -71,5 +71,5 @@ def ReserveProperty(request, idProperty):
         date.reservation = reservation
         date.save()
 
-    return HttpResponseRedirect(reverse("Airbnb:Index"))
+    return render(request, "Airbnb/welcome.html", {"cities": models.City.objects.all(), "message" : "Thank you for your reservation!"})
 
